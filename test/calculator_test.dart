@@ -3,8 +3,7 @@ import 'package:unit_test/calculator.dart';
 
 void main() {
   test('calculator return 5 when 1+4', () {
-/// structure the 3 AAA - Arrange , Act, Assert
-
+    /// structure the 3 AAA - Arrange , Act, Assert
 
     // Arrange (Setup) -> create calculator object
     final calculator = Calculator();
@@ -18,5 +17,10 @@ void main() {
       5,
       reason: 'it should be exactly 5',
     );
+  });
+
+  /// method matcher of test
+  test('calculator creates non null object', () {
+    expect(Calculator(), isNotNull);
   });
 }
