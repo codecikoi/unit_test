@@ -23,4 +23,16 @@ void main() {
   test('calculator creates non null object', () {
     expect(Calculator(), isNotNull);
   });
+
+  /// TypeMatcher
+  test('calculator returns double number (5.0) 5 when 1+4', () {
+    final calculator = Calculator();
+
+    final result = calculator.add(1, 4);
+
+    expect(
+      result,
+      isA<double>(),
+    );
+  });
 }
